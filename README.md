@@ -26,7 +26,7 @@ SECRET=secretkey
 
   ![UML-Diagram](UML_Diagram.png)
 
-- [Pull Request](https://github.com/Samer-Alnajjar/auth-api/pull/3)
+- [Pull Request](https://github.com/Samer-Alnajjar/auth-api/pull/5)
 
 - [Heroku-deployment](https://samer-auth-api.herokuapp.com/)
 
