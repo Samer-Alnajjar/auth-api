@@ -48,3 +48,6 @@ SECRET=secretkey
     3. Run "npm i".
     4. Create .env file and PORT inside it.
     5. Then run "npm start"
+
+
+
