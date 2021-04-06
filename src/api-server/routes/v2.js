@@ -1,5 +1,9 @@
 'use strict';
 
+const bearerAuth = require('../../auth-server/middleware/bearer.js');
+const permissions = require('../../auth-server/middleware/acl.js');
+
+
 const fs = require('fs');
 const express = require('express');
 const Collection = require('../models/data-collection.js');
@@ -27,12 +31,12 @@ router.param('model', (req, res, next) => {
   }
 });
 
-router.get('/:model', handleGetAll);
-router.get('/:model/:id', handleGetOne);
-router.post('/:model', handleCreate);
-router.put('/:model/:id', handleUpdate);
-router.patch('/:model/:id', handleUpdate);
-router.delete('/:model/:id', handleDelete);
+router.get('/:model', bearerAuth, handleGetAll);
+router.get('/:model/:id', bearerAuth, handleGetOne);
+router.post('/:model',bearerAuth , permissions("create"), handleCreate);
+router.put('/:model/:id',bearerAuth , permissions("update"), handleUpdate);
+router.patch('/:model/:id',bearerAuth , permissions("update"), handleUpdate);
+router.delete('/:model/:id',bearerAuth , permissions("delete "), handleDelete);
 
 async function handleGetAll(req, res) {
   try {
@@ -88,3 +92,4 @@ async function handleDelete(req, res) {
 
 
 module.exports = router;
+
