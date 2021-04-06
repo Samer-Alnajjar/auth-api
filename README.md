@@ -17,18 +17,18 @@ SECRET=secretkey
 
   
 - **Tests that assert your features:**
-    - [GitHub Action](https://github.com/Samer-Alnajjar/bearer-auth/actions)
+    - [GitHub Action](https://github.com/Samer-Alnajjar/auth-api/actions)
     - Coverage
 
 ![Coverage](coverage.png)
 
 - **UML Diagram**
 
-  ![UML-Diagram](UMLDiagram.png)
+  ![UML-Diagram](UML_Diagram.png)
 
-- [Pull Request](https://github.com/Samer-Alnajjar/api-server/pull/4)
+- [Pull Request](https://github.com/Samer-Alnajjar/auth-api/pull/2)
 
-- [Heroku-deployment](https://samer-bearer-auth.herokuapp.com/)
+- [Heroku-deployment](https://samer-auth-api.herokuapp.com/)
 
 - How do I install the app or library?
   1. Clone the repo from git hub, by run the following command "git clone -repo-".
@@ -48,5 +48,3 @@ SECRET=secretkey
     3. Run "npm i".
     4. Create .env file and PORT inside it.
     5. Then run "npm start"
-
-
