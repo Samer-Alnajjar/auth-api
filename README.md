@@ -4,7 +4,7 @@ Class401-Lab08
 
 - **Branch name** : dev
 - **MongoDB URI:** 
-MONGODB_URI=mongodb+srv://samer:0000@cluster0.1obxq.mongodb.net/samer?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://samer:0000@cluster0.1obxq.mongodb.net/lab8?retryWrites=true&w=majority
 - **Secret**
 SECRET=secretkey
 - **Feature requirement:**
