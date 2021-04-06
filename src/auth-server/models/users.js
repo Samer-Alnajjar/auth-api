@@ -37,10 +37,15 @@ users.pre('save', async function () {
 
 // BASIC AUTH
 users.statics.authenticateBasic = async function (username, password) {
-  const user = await this.findOne({ username })
-  const valid = await bcrypt.compare(password, user.password)
-  if (valid) { return user; }
-  throw new Error('Invalid User');
+  try {
+    const user = await this.findOne({ username })
+    const valid = await bcrypt.compare(password, user.password)
+    if (valid) { return user; }
+    throw new Error('Invalid User');
+  } catch (error) {
+    throw new Error(error.message)
+  }
+
 }
 
 // BEARER AUTH
